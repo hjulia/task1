@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.hide {
+    display: none;
+}
+.table {
+    display: table;
+}
+.tr {
+    display: table-row;
+}
+.td {
+    display: table-cell;
+}
+
+.tablo {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.tablo .td {
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.tablo a.tr {
+    text-decoration: none;
+    color: inherit;
+}
+.tablo .thead {
+    background-color: #00acdb;
+    color: #fff;
+}
+.tablo #head-tablo.fix {
+    position: fixed;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.tablo .arrival, .tablo .departure {display: none;}
+input[name='arrival']:checked ~.tablo .arrival {display: table-row;}
+input[name='departure']:checked ~.tablo .departure {display: table-row;}
+
+.tablo .type span {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.arrival .type span {
+    background-image: url('img/arrivals.png');
+}
+.departure .type span {
+    background-image: url('img/departures.png');
+}
+.tr:not(.thead) .logo-airline span {
+    display: inline-block;
+    width: 105px;
+    height: 35px;
+    background-image: url('img/logo.png');
+}
+.logo-airline .uvt {
+    background-position: -8px -12px;
+}
+.logo-airline .s7 {
+    background-position: -155px -85px;
+}
+.logo-airline .ur-al {
+    background-position: -18px -80px;
+}
+.filter-type {
+    padding: 2px 20px;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+.filter-input:checked + .filter-type {
+    border-color: #f2b802;
+}
+
+.tablo > .tr:not(.hide-tr):nth-child(2n+3) > .td:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    height: 100%;
+    top: 0;
+    background-color: rgb(229, 231, 253);
+}
+.tablo .tr.hide-tr .td {
+    line-height: 3px;
+    padding: 0 5px;
+    z-index: 5;
+    background-color: #fff;
+}
+.tablo .tr.hide-tr .td > div {
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+}
+.tablo > .tr:not(.thead):not(.hide-tr) > .td:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #f2b802;
+    height: 9999px;
+    top: -4444px;
+}
+.tablo > .tr:not(.thead):not(.hide-tr):hover {
+    background-color: #f2b802;
+}
+.info li {
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;
+}
+.info li > div {
+    width: 50%;
+    display: inline-block;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+/*** popup ***/
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    outline: none;
+}
+.popup {
+    z-index: 110;
+    margin: 0 auto;
+    position: fixed;
+    background-color: #fff;
+    display: none;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    top: 25%;
+    left: 25%;
+}
+.overlay:target {
+    display: block;
+}
+.overlay:target+.popup {
+    display: block;
+}
+
+.in_popup {
+    height: 100%;
+    overflow: auto;
+}
+.close {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url('img/close_black.jpg');
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 2px solid #F6C824;
+}
+/*** end ***/
+.full-plane {
+    display: inline-block;
+}
+.short-place {
+    display: none;
+}
+@media (max-width: 900px) {
+    .airline {display: none;}
+}
+@media (max-width: 800px) {
+    .note {display: none;}
+}
+@media (max-width: 700px) {
+    .full-plane {
+        display: none;
+    }
+    .short-place {
+        display: inline-block;
+    }
+}
+@media (max-width: 630px) {
+    .logo-airline {display: none;}
+}

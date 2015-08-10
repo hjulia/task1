@@ -1,0 +1,993 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Онлайн-табло</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<input type="checkbox" checked name="arrival" id="arrival" class="hide filter-input" />
+		<label for="arrival" class="filter-type">прилёт</label>
+		<input type="checkbox" checked name="departure" id="departure"  class="hide filter-input" />
+		<label for="departure" class="filter-type">вылет</label>
+		<div class="tablo table">
+			<div id="head-tablo" class="tr thead">
+				<div class="td type">тип рейса</div>
+				<div class="td number">номер рейса</div>
+				<div class="td airline">авиакомпания</div>
+				<div class="td logo-airline">
+					<span class="full-plane">логотип авиакомпании</span>
+					<span class="short-place">логотип</span>
+				</div>
+				<div class="td type-plane">тип воздушного судна</div>
+				<div class="td place">аэропорт назначения</div>
+				<div class="td time">
+					<span class="full-plane">плановое время вылета или прилёта</span>
+					<span class="short-place">время</span>
+				</div>
+				<div class="td status">статус рейса</div>
+				<div class="td note">примечание</div>
+			</div>
+			<a class="tr arrival" href="#str1">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН169</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Б 737-500</span>
+					<span class="short-place">Б737</span>
+				</div>
+				<div class="td place">Минеральные Воды</div>
+				<div class="td time">09:40</div>
+				<div class="td status">прилетел</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str2">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 875</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Париж</div>
+				<div class="td time">09:50</div>
+				<div class="td status">вылетел</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr departure" href="#str3">
+				<div class="td type"><span></span></div>
+				<div class="td number">У6277</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-777</span>
+					<span class="short-place">B777</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">09:51</div>
+				<div class="td status">вылетел</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str4">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 866</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Париж</div>
+				<div class="td time">10:04</div>
+				<div class="td status">совершил посадку в 10:16</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str5">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 135</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Баку</div>
+				<div class="td time">10:05</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr arrival" href="#str6">
+				<div class="td type"><span></span></div>
+				<div class="td number">У1318</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-137</span>
+					<span class="short-place">137</span>
+				</div>
+				<div class="td place">Баку</div>
+				<div class="td time">10:12</div>
+				<div class="td status">идёт регистрация</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str7">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН931</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Екатеринбург</div>
+				<div class="td time">10:15</div>
+				<div class="td status">идёт регистрация</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str8">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН1215</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-777</span>
+					<span class="short-place">B777</span>
+				</div>
+				<div class="td place">Челябинск</div>
+				<div class="td time">10:15</div>
+				<div class="td status">выдыча багажа</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str9">
+				<div class="td type"><span></span></div>
+				<div class="td number">У7764</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">10:21</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str10">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 547</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Челябинск</div>
+				<div class="td time">10:26</div>
+				<div class="td status">задерживается</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str12">
+				<div class="td type"><span></span></div>
+				<div class="td number">У3478</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Краснодар</div>
+				<div class="td time">10:27</div>
+				<div class="td status">отменён</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str13">
+				<div class="td type"><span></span></div>
+				<div class="td number">У1152</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">10:34</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str14">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН3587</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Екатеринбург</div>
+				<div class="td time">10:40</div>
+				<div class="td status">совершил посадку в 10:32</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str15">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН169</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Б 737-500</span>
+					<span class="short-place">Б737</span>
+				</div>
+				<div class="td place">Минеральные Воды</div>
+				<div class="td time">09:40</div>
+				<div class="td status">прилетел</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str16">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 875</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Париж</div>
+				<div class="td time">09:50</div>
+				<div class="td status">вылетел</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr departure" href="#str17">
+				<div class="td type"><span></span></div>
+				<div class="td number">У6277</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-777</span>
+					<span class="short-place">B777</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">09:51</div>
+				<div class="td status">вылетел</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str18">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 866</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Париж</div>
+				<div class="td time">10:04</div>
+				<div class="td status">совершил посадку в 10:16</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str19">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 135</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Баку</div>
+				<div class="td time">10:05</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr arrival" href="#str20">
+				<div class="td type"><span></span></div>
+				<div class="td number">У1318</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-137</span>
+					<span class="short-place">137</span>
+				</div>
+				<div class="td place">Баку</div>
+				<div class="td time">10:12</div>
+				<div class="td status">идёт регистрация</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str21">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН931</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Екатеринбург</div>
+				<div class="td time">10:15</div>
+				<div class="td status">идёт регистрация</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str22">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН1215</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-777</span>
+					<span class="short-place">B777</span>
+				</div>
+				<div class="td place">Челябинск</div>
+				<div class="td time">10:15</div>
+				<div class="td status">выдыча багажа</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str23">
+				<div class="td type"><span></span></div>
+				<div class="td number">У7764</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">10:21</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str24">
+				<div class="td type"><span></span></div>
+				<div class="td number">S7 547</div>
+				<div class="td airline">S7</div>
+				<div class="td logo-airline"><span class="s7"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Челябинск</div>
+				<div class="td time">10:26</div>
+				<div class="td status">задерживается</div>
+				<div class="td note"></div>
+			</a>
+			<a class="tr arrival" href="#str25">
+				<div class="td type"><span></span></div>
+				<div class="td number">У3478</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Boeing-737</span>
+					<span class="short-place">B737</span>
+				</div>
+				<div class="td place">Краснодар</div>
+				<div class="td time">10:27</div>
+				<div class="td status">отменён</div>
+				<div class="td note">El-Al</div>
+			</a>
+			<a class="tr departure" href="#str26">
+				<div class="td type"><span></span></div>
+				<div class="td number">У1152</div>
+				<div class="td airline">Уральские авиалинии</div>
+				<div class="td logo-airline"><span class="ur-al"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Airbus A310</span>
+					<span class="short-place">A310</span>
+				</div>
+				<div class="td place">Санкт-Петербург</div>
+				<div class="td time">10:34</div>
+				<div class="td status">вылетел</div>
+				<div class="td note">S7</div>
+			</a>
+			<a class="tr departure" href="#str27">
+				<div class="td type"><span></span></div>
+				<div class="td number">УН3587</div>
+				<div class="td airline">ЮВТ АЭРО</div>
+				<div class="td logo-airline"><span class="uvt"></span></div>
+				<div class="td type-plane">
+					<span class="full-plane">Ту-134</span>
+					<span class="short-place">134</span>
+				</div>
+				<div class="td place">Екатеринбург</div>
+				<div class="td time">10:40</div>
+				<div class="td status">совершил посадку в 10:32</div>
+				<div class="td note"></div>
+			</a>
+			<div class="tr hide-tr">
+				<div class="td type"><div>тип рейса</div></div>
+				<div class="td number"><div>номер рейса</div></div>
+				<div class="td airline"><div>авиакомпания</div></div>
+				<div class="td logo-airline"><div>
+					<span class="full-plane">логотип авиакомпании</span>
+					<span class="short-place">логотип</span>
+				</div></div>
+				<div class="td type-plane"><div>тип воздушного судна</div></div>
+				<div class="td place"><div>аэропорт назначения</div></div>
+				<div class="td time"><div>
+					<span class="full-plane">плановое время вылета или прилёта</span>
+					<span class="short-place">время</span>
+				</div></div>
+				<div class="td status"><div>статус рейса</div></div>
+				<div class="td note"><div>примечание</div></div>
+			</div>
+		</div>
+		<div class="full_info">
+			<div class="">
+				<a href="#x" class="overlay" id="str1"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str2"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str3"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str4"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str5"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str6"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str7"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str8"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str9"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str10"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str11"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str12"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str13"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str14"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str15"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str16"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str17"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str18"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str19"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str20"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str21"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str22"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str23"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str24"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str25"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str26"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>s7</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="s7"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>вылетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str27"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+			<div class="">
+				<a href="#x" class="overlay" id="str28"></a>
+				<div class="popup">
+					<div class="in_popup">
+						<ul class="info">
+							<li class="type"><div>тип рейса</div>Прилёт</li>
+							<li class="number"><div>номер рейса</div>УН169</li>
+							<li class="airline"><div>авиакомпания</div>ЮВТ АЭРО</li>
+							<li class="logo-airline"><div>логотип авиакомпании</div><span class="uvt"></span></li>
+							<li class="type-plane"><div>тип воздушного судна</div>Б 737-500</li>
+							<li class="place"><div>аэропорт назначения</div>Минеральные Воды</li>
+							<li class="time"><div>плановое время вылета или прилёта</div>09:40</li>
+							<li class="status"><div>статус рейса</div>прилетел</li>
+							<li class="note"><div>примечание</div>S7</li>
+						</ul>
+					</div>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+		</div>
+			
+		<script>
+			var elemFix = document.getElementById('head-tablo');
+			window.onscroll = function() {
+				var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+				if (scrolled > 46) {
+					elemFix.classList.add('fix');
+					var wTablo = document.getElementsByClassName('tablo')[0].offsetWidth;
+					var wType = document.getElementsByClassName('type')[1].offsetWidth;
+					var wNumber = document.getElementsByClassName('number')[1].offsetWidth;
+					var wAirline = document.getElementsByClassName('airline')[1].offsetWidth;
+					var wLogoAirline = document.getElementsByClassName('logo-airline')[1].offsetWidth;
+					var wTypePlane = document.getElementsByClassName('type-plane')[1].offsetWidth;
+					var wPlace = document.getElementsByClassName('place')[1].offsetWidth;
+					var wTime = document.getElementsByClassName('time')[1].offsetWidth;
+					var wStatus = document.getElementsByClassName('status')[1].offsetWidth;
+					var wNote = document.getElementsByClassName('note')[1].offsetWidth;
+
+					elemFix.style.width = wTablo+'px';
+					document.getElementsByClassName('type')[0].style.width = wType+'px';
+					document.getElementsByClassName('number')[0].style.width = wNumber+'px';
+					document.getElementsByClassName('airline')[0].style.width = wAirline+'px';
+					document.getElementsByClassName('logo-airline')[0].style.width = wLogoAirline+'px';
+					document.getElementsByClassName('type-plane')[0].style.width = wTypePlane+'px';
+					document.getElementsByClassName('place')[0].style.width = wPlace+'px';
+					document.getElementsByClassName('time')[0].style.width = wTime+'px';
+					document.getElementsByClassName('status')[0].style.width = wStatus+'px';
+					document.getElementsByClassName('note')[0].style.width = wNote+'px';
+
+				}
+				else {
+					elemFix.classList.remove('fix');
+					elemFix.style.width = null;
+					document.getElementsByClassName('type')[0].style.width = null;
+					document.getElementsByClassName('number')[0].style.width = null;
+					document.getElementsByClassName('airline')[0].style.width = null;
+					document.getElementsByClassName('logo-airline')[0].style.width = null;
+					document.getElementsByClassName('type-plane')[0].style.width = null;
+					document.getElementsByClassName('place')[0].style.width = null;
+					document.getElementsByClassName('time')[0].style.width = null;
+					document.getElementsByClassName('status')[0].style.width = null;
+					document.getElementsByClassName('note')[0].style.width = null;
+				}
+			}
+		</script>
+	</body>
+</html>
